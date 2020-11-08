@@ -17,11 +17,12 @@ body {
 
 section {
 	margin: auto 0;
+	padding:1rem;
 }
 nav {
 	display: flex;
-	width: 80%;
-	padding: 15px 10%;
+	width: 96%;
+	padding: 2% 3%;
 	background-color: #4854A8;
 }
 .right-header {
@@ -35,17 +36,74 @@ nav {
 	flex-grow: 1;
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
 }
 
 .right-header a {
 	padding: 10px 15px;
 	text-decoration: none;
 	color: inherit;
-	transition: border-bottom 0.5s;
+	transition: border-bottom 0.15s ease-in;
 }
-.right-header a:hover {
+.right-header a:hover, .right-header .active{
 	border-bottom: solid 5px #70B6DB;
 }
 .left-header {
 	flex-grow: 1;
+}
+
+/* Content Styles */
+
+.top-content {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.top-content .left {
+	padding: 10px;
+	background-color: green;
+}
+
+.venue-img {
+	display: inline-block;
+   	position: relative;
+   	text-align: center;
+}
+
+.venue-img .caption {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	font-size: 1.1rem;
+	color: black;
+	
+}
+
+.top-content .right {
+	background-color: red;
+}
+.top-content .right ul {
+	list-style-type: none;
+	font-size: 20px;
+}
+ul.album-list > li:before {
+    display: inline-block;
+    content: "-";
+    width: 0.7em;
+    margin-left: -1em;
+}
+.top-content .right li {
+	padding: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+	nav {
+		padding: 15px 10%;
+		width: 80%;
+	}
+	.venue-img .caption {
+		font-size: 1.7rem;
+	}
+	
 }
